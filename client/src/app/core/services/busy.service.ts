@@ -13,7 +13,7 @@ busyRequestCount = 0;
     this.busyRequestCount++;
     this.spinnerService.show(undefined,
       {
-        type: 'pacman',
+        type: 'timer',
         bdColor: 'rgba(255,255,255,0.7)',
         color: '#333333'
       });

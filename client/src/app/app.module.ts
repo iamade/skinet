@@ -10,6 +10,7 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { HomeModule } from './home/home.module';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { LoadingInterceptor } from './core/interceptors/loading.interceptors';
 
 
 @NgModule({
@@ -28,9 +29,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     PaginationModule.forRoot()
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true
-    }
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
