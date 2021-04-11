@@ -25,9 +25,6 @@ basketTotal$ = this.basketTotalSource.asObservable();
         this.basketSource.next(basket);
         this.calculateTotals();
       //  console.log(this.getCurrentBasketValue());
-     
-        
-        
       })
     )
   }
@@ -103,7 +100,10 @@ basketTotal$ = this.basketTotalSource.asObservable();
 
   private addOrUpdateItem(items: IBasketItem[], itemToAdd: IBasketItem, quantity: number): IBasketItem[] {
     console.log('addorupdate',items);
+    
+    
     const index = items.findIndex(i => i.id === itemToAdd.id);
+    console.log('this is index', index);
     if(index === -1) {
       itemToAdd.quantity = quantity;
       items.push(itemToAdd);
