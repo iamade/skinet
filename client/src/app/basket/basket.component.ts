@@ -20,11 +20,11 @@ basket$: Observable<IBasket>;
     this.basketService.removeItemFromBasket(item);
   }
 
-  increamentItemQuantity(item: IBasketItem) {
+  incrementItemQuantity(item: IBasketItem) {
     this.basketService.incrementItemQuantity(item);
   }
   
-  decreamentItemQuantity(item: IBasketItem) {
+  decrementItemQuantity(item: IBasketItem) {
     this.basketService.decrementItemQuantity(item);
   }
 
