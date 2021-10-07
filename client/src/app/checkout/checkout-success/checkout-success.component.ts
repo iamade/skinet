@@ -15,6 +15,8 @@ order: IOrder;
     const state = navigation && navigation.extras && navigation.extras.state;
     if (state) {
       this.order = state as IOrder;
+      console.log('order', this.order.id);
+      
     }
    }
 
